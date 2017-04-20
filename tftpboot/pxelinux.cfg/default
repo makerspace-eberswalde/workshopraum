@@ -1,0 +1,15 @@
+DISPLAY boot.txt
+TIMEOUT 10000
+PROMPT 0
+DEFAULT _display/vesamenu.c32
+
+MENU BEGIN UBUNTU
+	LABEL Previous
+	MENU LABEL Previous Menu
+	TEXT HELP
+	Return to previous menu
+	ENDTEXT
+	MENU EXIT
+	MENU SEPARATOR
+	MENU INCLUDE menus/ubuntu.menu
+MENU END
