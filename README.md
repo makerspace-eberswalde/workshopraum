@@ -17,3 +17,10 @@
 
 ## TODO
 * ask Frank how he installed automatic run level for dnsmasq
+
+# knowledge
+
+## preseeding
+* good workthrough with hosting preseed file via http-server: https://debian-administration.org/article/708/Automating_the_Debian_installer_with_PXE_and_preseeding
+* http://louwrentius.com/automated-install-of-debian-linux-based-on-pxe-net-booting.html
+* https://debian-administration.org/article/478/Setting_up_a_server_for_PXE_network_booting
