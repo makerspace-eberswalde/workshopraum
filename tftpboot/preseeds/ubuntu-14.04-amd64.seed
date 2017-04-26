@@ -109,17 +109,17 @@ d-i netcfg/wireless_wep string
 d-i mirror/country string manual
 
 # HTTP mirror configuration.
-#d-i mirror/protocol string http
-#d-i mirror/http/hostname string archive.ubuntu.com
-#d-i mirror/http/hostname string mirror.home.lan
-#d-i mirror/http/directory string /ubuntu
-#d-i mirror/http/proxy string
+d-i mirror/protocol string http
+d-i mirror/http/hostname string archive.ubuntu.com
+d-i mirror/http/hostname string mirror.home.lan
+d-i mirror/http/directory string /ubuntu
+d-i mirror/http/proxy string
 
 # FTP mirror configuration.
-d-i mirror/protocol string ftp
-d-i mirror/ftp/hostname string mirror.home.lan
-d-i mirror/ftp/directory string /pub/linux/ubuntu
-d-i mirror/ftp/proxy string
+# d-i mirror/protocol string ftp
+# d-i mirror/ftp/hostname string mirror.home.lan
+# d-i mirror/ftp/directory string /pub/linux/ubuntu
+# d-i mirror/ftp/proxy string
 
 # Alternatively: by default, the installer uses CC.archive.ubuntu.com where
 # CC is the ISO-3166-2 code for the selected country. You can preseed this
