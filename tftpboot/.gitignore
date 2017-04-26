@@ -1,0 +1,10 @@
+# tftp
+distros/
+
+# nodejs 
+node_modules/
+
+# vim
+*.swp
+*.swo
+*~
