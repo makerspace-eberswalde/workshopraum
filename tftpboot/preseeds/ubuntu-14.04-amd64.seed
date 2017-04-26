@@ -106,14 +106,18 @@ d-i netcfg/wireless_wep string
 ### Mirror settings                                                          ###
 ################################################################################
 # If you select ftp, the mirror/country string does not need to be set
-d-i mirror/country string manual
+#d-i mirror/country string manual
 
 # HTTP mirror configuration.
-d-i mirror/protocol string http
-d-i mirror/http/hostname string archive.ubuntu.com
-d-i mirror/http/hostname string mirror.home.lan
-d-i mirror/http/directory string /ubuntu
-d-i mirror/http/proxy string
+#d-i mirror/protocol string http
+#d-i mirror/http/hostname string archive.ubuntu.com
+#d-i mirror/http/hostname string mirror.home.lan
+#d-i mirror/http/directory string /ubuntu
+#d-i mirror/http/proxy string
+#d-i mirror/country string manual
+#d-i mirror/http/hostname string http.us.debian.org
+#d-i mirror/http/directory string /debian
+#d-i mirror/http/proxy string
 
 # FTP mirror configuration.
 # d-i mirror/protocol string ftp
@@ -354,12 +358,12 @@ d-i passwd/root-login boolean false
 #d-i passwd/root-password-crypted password $1$ZGW8Hqa4$L0ENJjVIrAxTXIBmGtv5C/
 
 # To create a normal user account.
-d-i passwd/user-fullname string Georg Kainzbauer
-d-i passwd/username string georg
+d-i passwd/user-fullname string Makerspace Eberswalde
+d-i passwd/username string mkrspcebw
 
 # Normal user's password, either in clear text
-d-i passwd/user-password password UserPassword
-d-i passwd/user-password-again password UserPassword
+d-i passwd/user-password password pw 
+d-i passwd/user-password-again password pw 
 
 # or encrypted using an MD5 hash.
 #d-i passwd/user-password-crypted password [MD5 hash]
@@ -382,8 +386,8 @@ d-i user-setup/allow-password-weak boolean true
 #d-i passwd/user-default-groups string audio cdrom video
 
 # Set to true if you want to encrypt the first user's home directory.
-#d-i user-setup/encrypt-home boolean false
-d-i user-setup/encrypt-home boolean true
+d-i user-setup/encrypt-home boolean false
+#d-i user-setup/encrypt-home boolean true
 
 ################################################################################
 ### Apt setup                                                                ###
@@ -447,6 +451,7 @@ d-i pkgsel/include string      \
     nmap                       \
     wireshark                  \
     tshark                     \
+    tree                       \
     iptraf
 
 # Whether to upgrade packages after debootstrap.
@@ -603,6 +608,6 @@ xserver-xorg xserver-xorg/config/monitor/mode-list select 1024x768 @ 60 Hz
 # still a usable /target directory. You can chroot to /target and use it
 # directly, or use the apt-install and in-target commands to easily install
 # packages and run commands in the target system.
-#d-i preseed/late_command string apt-install zsh; in-target chsh -s /bin/zsh
-d-i preseed/late_command string \
-    in-target sed -i 's/http:\/\/mirror/ftp:\/\/mirror/g' /etc/apt/sources.list
+# d-i preseed/late_command string \
+    # in-target sed -i 's/http:\/\/mirror/ftp:\/\/mirror/g' /etc/apt/sources.list
+d-i preseed/late_command string apt-install zsh; in-target chsh -s /bin/zsh
