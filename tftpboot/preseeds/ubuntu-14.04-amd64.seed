@@ -452,6 +452,9 @@ d-i pkgsel/include string      \
     wireshark                  \
     tshark                     \
     tree                       \
+    curl                       \
+    htop                       \
+    git                        \
     iptraf
 
 # Whether to upgrade packages after debootstrap.
