@@ -1,5 +1,7 @@
 # tftp
-distros/
+distros/*
+!distros/.gitkeep
+
 
 # nodejs 
 node_modules/
