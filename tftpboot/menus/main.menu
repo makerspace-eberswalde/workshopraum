@@ -2,5 +2,5 @@ menu hshift 13
 menu width 49
 menu margin 8
 
-menu title Ubuntu 14.04-amd64 Manuell
+menu title Ubuntu 14.04-amd64 
 include menus/ubuntu-14.04-amd64/menu.cfg
