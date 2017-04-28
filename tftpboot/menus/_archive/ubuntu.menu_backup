@@ -2,18 +2,18 @@ menu hshift 13
 menu width 49
 menu margin 8
 
-menu title Ubuntu 14.04-amd64 Manuell
-include distros/ubuntu-14.04.amd64/ubuntu-installer/amd64/boot-screens/stdmenu.cfg
-include distros/ubuntu-14.04.amd64/ubuntu-installer/amd64/boot-screens/txt.cfg
-include distros/ubuntu-14.04.amd64/ubuntu-installer/amd64/boot-screens/gtk.cfg
+menu title Ubuntu 16.04-amd64 Manuell
+include distros/ubuntu-16.04.amd64/ubuntu-installer/amd64/boot-screens/stdmenu.cfg
+include distros/ubuntu-16.04.amd64/ubuntu-installer/amd64/boot-screens/txt.cfg
+include distros/ubuntu-16.04.amd64/ubuntu-installer/amd64/boot-screens/gtk.cfg
 menu begin advanced
 	menu title Advanced options
 	include ubuntu/test/amd64/boot-screens/stdmenu.cfg
 	label mainmenu
 		menu label ^Back..
 		menu exit
-	include distros/ubuntu-14.04.amd64/ubuntu-installer/amd64/boot-screens/adtxt.cfg
-	include distros/ubuntu-14.04.amd64/ubuntu-installer/amd64/boot-screens/adgtk.cfg
+	include distros/ubuntu-16.04.amd64/ubuntu-installer/amd64/boot-screens/adtxt.cfg
+	include distros/ubuntu-16.04.amd64/ubuntu-installer/amd64/boot-screens/adgtk.cfg
 menu end
 label help
 	menu label ^Help
