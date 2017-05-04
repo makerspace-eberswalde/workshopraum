@@ -1,6 +1,0 @@
-meneu hshift 13
-menu width 49
-menu margin 8
-
-include menus/ubuntu-14.04-amd64/menu.cfg
-include menus/ubuntu-16.04-amd64/menu.cfg
