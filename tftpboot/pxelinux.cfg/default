@@ -43,3 +43,13 @@ MENU BEGIN UBUNTU 16.04 PRESEED
 	MENU SEPARATOR
 	MENU INCLUDE menus/ubuntu-16.04-amd64/txt-preseed.cfg
 MENU END
+MENU BEGIN UBUNTU 16.04 PRESEED LOCAL
+	LABEL Previous
+	MENU LABEL Previous Menu
+	TEXT HELP
+	Return to previous menu
+	ENDTEXT
+	MENU EXIT
+	MENU SEPARATOR
+	MENU INCLUDE menus/ubuntu-16.04-amd64/txt-preseed-local.cfg
+MENU END
